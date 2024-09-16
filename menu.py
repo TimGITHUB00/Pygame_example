@@ -36,9 +36,6 @@ class Menu:
         #SETTING BUTTON SIZE VARIABLES FROM CONFIG
         self.bw = BUTTON_WIDTH
         self.bh = BUTTON_HEIGHT
-        #SETTING IMAGE SIZE VARIABLES FROM CONFIG
-        self.iw = IMAGE_WIDTH
-        self.ih = IMAGE_HEIGHT
         #SETTING SHAPE SIZE VARIABLES FROM CONFIG
         self.sw = SHAPE_WIDTH
         self.sh = SHAPE_HEIGHT
@@ -88,17 +85,6 @@ class Menu:
         self.buttonsGroup = pygame.sprite.Group()
         #ADDING ALL BUTTONS TO BUTTONS SPRITE GROUP
         self.buttonsGroup.add(self.buttons)
-        #SETTING IMAGES PATH FROM CONFIG
-        self.path = PATH
-        #SETTING IMAGE NAME FROM CONFIG
-        self.imagename = IMAGE1
-        #SETTING FULL PATH OF IMAGE
-        self.fullpath = self.path+self.imagename
-        #CREATING IMAGES LIST
-        self.images = [
-            #CREATING IMAGE
-            self.image([self.cw, self.ch-75], [self.iw, self.ih], self.fullpath)
-        ]
         #CREATING SHAPES LIST
         self.shapes = [
             #CREATING SHAPE
@@ -147,10 +133,6 @@ class Menu:
             text.render(self.window)
         #DRAWING ALL BUTTONS IN BUTTONS SPRITE GROUP TO WINDOW
         self.buttonsGroup.draw(self.window)
-        #ITERATING THROUGH ALL IMAGES IN IMAGES LIST
-        for image in self.images:
-            #CALLING RENDER PROCEDURE IN IMAGE CLASS
-            image.render(self.window)
         #ITERATING THROUGH ALL SHAPES IN SHAPES LIST
         for shape in self.shapes:
             #CALLING RENDER PROCEDURE IN SHAPE CLASS
