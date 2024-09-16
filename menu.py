@@ -147,3 +147,5 @@ class Menu:
     def draw_window(self):
         #RENDERING WINDOW IN SCREEN
         self.screen.blit(self.window, (0, 0))
+
+    #test
