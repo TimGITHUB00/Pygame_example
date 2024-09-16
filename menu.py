@@ -79,7 +79,8 @@ class Menu:
         #CREATING BUTTONS LIST
         self.buttons = [
             #CREATING BUTTON FOR CHANGING THE CHANGEABLE TEXT
-            self.button([self.cw, self.ch-250], [self.bw, self.bh], self.bg, self.fg, self.txtButtons[0])
+            self.button([self.cw, self.ch-250], [self.bw, self.bh], self.bg, self.fg, self.txtButtons[0]),
+            self.button([self.cw, self.ch-100], [self.bw, self.bh], self.bg, self.fg, self.txtButtons[1])
         ]
         #CREATING BUTTONS SPRITE GROUP
         self.buttonsGroup = pygame.sprite.Group()
